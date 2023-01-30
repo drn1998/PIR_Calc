@@ -74,7 +74,7 @@ if($_POST["xmin"] >= $_POST["xmax"]) {
 
 $out_str = "";
 $inner_marquee = "";
-	
+		
 $evaluator = new Evaluator();
 	
 $evaluator->functions = [
@@ -103,7 +103,7 @@ while($xVal <= $_POST["xmax"]) {
 	$evaluator->variables['x'] = $xVal;
 	try {
 		$result = $evaluator->execute($_POST["eval"]);
-		$inner_marquee .= "<strong>" . sprintf('%0.*F', intval(strlen(substr(strrchr($_POST["xival"], "."), 1))), $xVal) . ": </strong>" . sprintf('%0.*F', intval($_POST["len"]), $result);
+		$inner_marquee .= "<strong>" . sprintf('%0.*F', intval(strlen(substr(strrchr($_POST["xival"], "."), 1))), $xVal) . ": </strong>" . ($result < 0 && isset($_POST["negred"]) ? "<span style=\"color: red;\">" : "") . sprintf('%0.*F', intval($_POST["len"]), $result) . ($result < 0 && isset($_POST["negred"]) ? "</span>" : "");
 		if($xVal + $_POST["xival"] <= $_POST["xmax"])	// Do not append in last iteration
 			$inner_marquee .= "&nbsp;&bull;&nbsp;";
 	}
