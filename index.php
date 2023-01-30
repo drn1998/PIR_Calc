@@ -42,6 +42,6 @@
 				<button type="submit">Auswerten</button>
 			</p>
 		</form>
-		<p><small>Version 0.1.1-alpha</small></p>
+		<p><small>Version 0.2.0-alpha</small></p>
 	</body>
 </html>
