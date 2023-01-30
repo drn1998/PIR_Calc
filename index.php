@@ -35,9 +35,13 @@
 				<input type="numeric" name="len" placeholder="2" value="2"><br/>
 			</p>
 			<p>
+				<label for="negred">Negative Zahlen <span style="color: red;">rot</span> darstellen?</label>
+				<input type="checkbox" name="negred" value="negred">
+			</p>
+			<p>
 				<button type="submit">Auswerten</button>
 			</p>
 		</form>
-		<p><small>Version 0.1.0-alpha</small></p>
+		<p><small>Version 0.1.1-alpha</small></p>
 	</body>
 </html>
