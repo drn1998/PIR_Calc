@@ -103,7 +103,7 @@ while($xVal <= $_POST["xmax"]) {
 	$evaluator->variables['x'] = $xVal;
 	try {
 		$result = $evaluator->execute($_POST["eval"]);
-		$inner_marquee .= "<strong>" . $xVal . ": </strong>" . sprintf('%0.*F', intval($_POST["len"]), $result);
+		$inner_marquee .= "<strong>" . sprintf('%0.*F', intval(strlen(substr(strrchr($_POST["xival"], "."), 1))), $xVal) . ": </strong>" . sprintf('%0.*F', intval($_POST["len"]), $result);
 		if($xVal + $_POST["xival"] <= $_POST["xmax"])	// Do not append in last iteration
 			$inner_marquee .= "&nbsp;&bull;&nbsp;";
 	}
